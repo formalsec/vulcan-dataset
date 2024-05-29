@@ -1,3 +1,0 @@
-/src/test/index.js-22-  it('disallows eval', () => {
-/src/test/index.js:23:    assert.throws(() => censor('eval("666")'))
-/src/test/index.js-24-  })

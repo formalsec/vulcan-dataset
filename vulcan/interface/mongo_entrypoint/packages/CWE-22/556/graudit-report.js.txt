@@ -1,3 +1,0 @@
-/src/bin/featurebook.js-35-
-/src/bin/featurebook.js:36:program.parse(process.argv);
-/src/bin/featurebook.js-37-

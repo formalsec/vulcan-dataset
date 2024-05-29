@@ -1,2 +1,0 @@
-/src/test/simple_test.js:11:19:11:25 [Moderate] DS137138 Insecure URL
-/src/test/simple_test.js:20:19:20:25 [Moderate] DS137138 Insecure URL

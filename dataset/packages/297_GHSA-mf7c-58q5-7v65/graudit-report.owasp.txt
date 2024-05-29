@@ -1,3 +1,0 @@
-/src/test/nw/index.html-10-    var sqlite = require('sqlite3');
-/src/test/nw/index.html:11:    document.write(sqlite.VERSION);
-/src/test/nw/index.html-12-    </script>.

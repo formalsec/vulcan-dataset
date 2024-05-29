@@ -1,3 +1,0 @@
-/src/index.js-41-  try {
-/src/index.js:42:    ast = acorn.parse(src, {
-/src/index.js-43-      ecmaVersion: 6,

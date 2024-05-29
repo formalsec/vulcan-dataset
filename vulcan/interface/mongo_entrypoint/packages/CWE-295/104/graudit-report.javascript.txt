@@ -1,3 +1,0 @@
-/src/index.js-103-        cache: opts.cache,
-/src/index.js:104:        strictSSL: opts['strict-ssl']
-/src/index.js-105-      })

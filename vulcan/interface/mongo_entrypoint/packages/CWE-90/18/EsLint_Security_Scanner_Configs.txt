@@ -1,6 +1,0 @@
-
-/src/lib/helper.js
-  25:12  error  Parsing error: Unexpected token i
-
-✖ 1 problem (1 error, 0 warnings)
-

@@ -1,3 +1,0 @@
-/src/install.js-174-    var file = path.join(tmpPath, name);
-/src/install.js:175:    var reader = fs.createReadStream(file);
-/src/install.js-176-

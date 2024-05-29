@@ -1,3 +1,0 @@
-/src/README.md-122-function deserialize(serializedJavascript){
-/src/README.md:123:  return eval('(' + serializedJavascript + ')');
-/src/README.md-124-}

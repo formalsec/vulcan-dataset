@@ -1,2 +1,0 @@
-/src/scripts/configure.js:34:14:34:20 [Moderate] DS137138 Insecure URL
-/src/scripts/configure.js:51:18:51:24 [Moderate] DS137138 Insecure URL

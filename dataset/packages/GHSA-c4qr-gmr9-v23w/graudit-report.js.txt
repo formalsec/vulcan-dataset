@@ -1,3 +1,0 @@
-/src/test/index.test-d.ts-39-  maxSockets: 20,
-/src/test/index.test-d.ts:40:  rejectUnauthorized: true,
-/src/test/index.test-d.ts-41-  sessionTimeout: 30000

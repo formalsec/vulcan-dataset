@@ -1,3 +1,0 @@
-/src/lib/utils.js-66-            try {
-/src/lib/utils.js:67:              var fn = eval('(' + msg.args[0] + ')');
-/src/lib/utils.js-68-              logger.setFilter(fn);

@@ -1,2 +1,0 @@
-/src/jq.js:4:16:4:22 [Moderate] DS137138 Insecure URL
-/src/jq.js:6:17:6:23 [Moderate] DS137138 Insecure URL

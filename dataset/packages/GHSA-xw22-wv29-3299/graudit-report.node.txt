@@ -1,3 +1,0 @@
-/src/src/EtsyClient.js-137-        if (responseString && typeof responseString === "string"){
-/src/src/EtsyClient.js:138:         var responseParsed = JSON.parse(responseString);
-/src/src/EtsyClient.js-139-         if (EtsyClient.debug) {

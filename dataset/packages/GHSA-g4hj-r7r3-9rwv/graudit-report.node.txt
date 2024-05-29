@@ -1,3 +1,0 @@
-/src/src/command.js-94-        if (options.format === 'JSON'){
-/src/src/command.js:95:          resolve([JSON.parse(report)]);
-/src/src/command.js-96-        } else {

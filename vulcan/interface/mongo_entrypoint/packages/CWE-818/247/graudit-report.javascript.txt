@@ -1,3 +1,0 @@
-/src/lib/install/index.js-32-
-/src/lib/install/index.js:33:	applyProxy({ rejectUnauthorized: false }, function(options)
-/src/lib/install/index.js-34-	{

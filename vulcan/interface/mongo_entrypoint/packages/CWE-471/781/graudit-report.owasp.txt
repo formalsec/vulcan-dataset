@@ -1,3 +1,0 @@
-/src/.jscs.json-66-
-/src/.jscs.json:67:	"disallowKeywords": ["with", "eval"],
-/src/.jscs.json-68-

@@ -1,2 +1,0 @@
-By injecting the following command [xss link](vbscript:alert(1&#41;)
-will get a link <a href="vbscript:alert(1)">xss link</a> 

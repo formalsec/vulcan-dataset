@@ -1,3 +1,0 @@
-/src/CHANGELOG.md-150-    [@fallenice]).
-/src/CHANGELOG.md:151:  * Don't use eval (thanks [@cweider]).
-/src/CHANGELOG.md-152-
