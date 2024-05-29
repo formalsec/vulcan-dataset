@@ -3,7 +3,7 @@
 Each advisory is identified by a unique ID, which obeys one of the following formats:
 
 - *npmjs_id*, where *npmjs_id* is a number, if at the time of review **npmjs.com** hosted the advisories (old format) and **github.com** does not host the advisory, e.g:
-    
+
         1548
 
 - *ghsa_id*, where *ghsa_id* is the ID of a GitHub Security Advisory (*GHSA-xxxx-xxxx-xxxx*), if at the time of review **github.com** hosted the advisories (new format), e.g:
@@ -16,21 +16,21 @@ Each advisory is identified by a unique ID, which obeys one of the following for
 
 ## *packages/*
 
-The *packages/* directory contains one directory for each advisory. In each directory there is a *.tgz* which contains the vulnerable package reported in the advisory and the output of all the tested tools for that package.   
+The *packages/* directory contains one directory for each advisory. In each directory there is a *.tgz* which contains the vulnerable package reported in the advisory and the output of all the tested tools for that package.
 
 ## *reviews/*
 
 The *reviews/* directory contains the 957 advisory reviews, the *patches/* directory and the *pocs/* directory.
 
 Each advisory review contains:
-    
+
 - **Advisory CWE:** The CWE assigned by the reporter who created the advisory.
 
 - **Advisory CVE:** The  Common Vulnerabilities and Exposures identifier (if it exists).
 
 - **Advisory Link:** A URL of the npm or github advisory web page.
 
-- **Correct CWE:** The CWE assigned by the reviewer (might differ from the Advisory CWE) 
+- **Correct CWE:** The CWE assigned by the reviewer (might differ from the Advisory CWE)
 
 - **Correct Package Link**: URL to download the correct package version which contains the vulnerability described in the advisory.
 
@@ -53,3 +53,7 @@ Each advisory review contains:
     the vulnerability in the advisory report (false positives).
 
     - **Score D:** The tool produces no output (false negative).
+
+## Citing
+
+For citing this dataset, please use the reference [in this link](https://ieeexplore.ieee.org/document/10168679).
