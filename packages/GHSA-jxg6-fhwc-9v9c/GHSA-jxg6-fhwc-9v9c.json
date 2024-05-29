@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-jxg6-fhwc-9v9c",
-        "cwe": "CWE-400"
+        "cve": "CVE-2020-28501",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-jxg6-fhwc-9v9c"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/es6-crawler-detect/-/es6-crawler-detect-3.1.2.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/crawler.js",
+                    "lineno": 104,
+                    "code": "isCrawler(userAgent = undefined)"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/crawler.js",
+                    "lineno": 116,
+                    "code": "var matches = this.compiledRegexList.exec(agent.trim());"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/JefferyHus/es6-crawler-detect/pull/27/commits/2e525feb4774f572f5e6fd71583ea61df1443f82"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

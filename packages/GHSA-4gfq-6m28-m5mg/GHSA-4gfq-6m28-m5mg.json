@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-4gfq-6m28-m5mg",
-        "cwe": "CWE-78"
+        "cve": "CVE-2020-7775",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-4gfq-6m28-m5mg"
     },
     "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/freediskspace/-/freediskspace-0.1.2.tgz",
@@ -9,14 +11,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "freediskspace.js",
+                    "lineno": 12,
+                    "code": "function detail(drive, callback) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "freediskspace.js",
+                    "lineno": 46,
+                    "code": "cp.exec(\"wmic logicaldisk where \"DeviceID='\" + drive + \"'\" get FreeSpace, Name, Size\", function (error, stdout) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "freediskspace.js",
+                    "lineno": 82,
+                    "code": "function driveList(callback) {"
+                },
+                "sink": {
+                    "file": "freediskspace.js",
+                    "lineno": 115,
+                    "code": "cp.exec(\"wmic logicaldisk get caption,providername,drivetype,volumename\", function (error, stdout) {"
                 }
             }
         ]
@@ -33,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

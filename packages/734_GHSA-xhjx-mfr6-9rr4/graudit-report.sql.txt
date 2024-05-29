@@ -1,3 +1,0 @@
-/src/lib/samsung-remote.js-68-
-/src/lib/samsung-remote.js:69:        var socket = net.connect(config.port, config.ip);
-/src/lib/samsung-remote.js-70-

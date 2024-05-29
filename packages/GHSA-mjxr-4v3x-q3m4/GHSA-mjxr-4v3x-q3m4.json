@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-mjxr-4v3x-q3m4",
-        "cwe": "CWE-20"
+        "cve": "CVE-2021-26540",
+        "cwe": "CWE-20",
+        "github_link": "https://github.com/advisories/GHSA-mjxr-4v3x-q3m4"
     },
     "correct_cwe": "CWE-20",
     "correct_package_link": "https://registry.npmjs.org/sanitize-html/-/sanitize-html-2.3.1.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 192,
+                    "code": "onopentag: function(name, attribs) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 323,
+                    "code": "const parsed = new URL(value, base);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://advisory.checkmarx.net/advisory/CX-2021-4309/"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/apostrophecms/sanitize-html/pull/460/commits/54851d0df96ba4016e203734e4432578017a5325"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

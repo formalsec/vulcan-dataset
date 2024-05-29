@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-w46j-8hm6-h8mm",
-        "cwe": "CWE-79"
+        "cve": "CVE-2021-23327",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-w46j-8hm6-h8mm"
     },
     "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/apexcharts/-/apexcharts-3.23.1.tgz",
@@ -9,58 +11,63 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/modules/legend/Legend.js",
+                    "lineno": 192,
+                    "code": "elLegendText.innerHTML = Array.isArray(text) ? text.join(' ') : text"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/modules/legend/Legend.js",
+                    "lineno": 208,
+                    "code": "Graphics.setAttrs(elLegendText, {"
+                }
+            },
+            {
+                "block": {
+                    "file": "src/modules/tooltip/Labels.js",
+                    "start_lineno": 228,
+                    "end_lineno": 228,
+                    "code": "Graphics.setAttrs(elLegendText, {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/apexcharts/apexcharts.js/pull/2158"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/apexcharts/apexcharts.js/commit/68f3f34d125719b4767614fe0a595cc65bde1d19"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

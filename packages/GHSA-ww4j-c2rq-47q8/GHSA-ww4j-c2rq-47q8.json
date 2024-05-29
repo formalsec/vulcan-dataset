@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-ww4j-c2rq-47q8",
-        "cwe": "CWE-77"
+        "cve": "CVE-2020-7784",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-ww4j-c2rq-47q8"
     },
     "correct_cwe": "CWE-77",
     "correct_package_link": "https://registry.npmjs.org/ts-process-promises/-/ts-process-promises-1.0.2.tgz",
@@ -9,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "process-promises.js",
+                    "file": "lib/process-promises.js",
                     "lineno": 43,
                     "code": "function exec(command, options) {"
                 },
                 "sink": {
-                    "file": "process-promises.js",
+                    "file": "lib/process-promises.js",
                     "lineno": 45,
                     "code": "var childProcess = cp.exec(command, options, function (err, stdout, stderr) {"
                 }
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

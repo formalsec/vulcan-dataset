@@ -1,2 +1,0 @@
-/src/marked.min.js:6:14826:6:14832 [Moderate] DS137138 Insecure URL
-/src/lib/marked.js:831:19:831:25 [Moderate] DS137138 Insecure URL

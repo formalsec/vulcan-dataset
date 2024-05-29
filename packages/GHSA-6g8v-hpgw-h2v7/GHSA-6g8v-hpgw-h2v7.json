@@ -1,29 +1,43 @@
 {
     "advisory": {
         "id": "GHSA-6g8v-hpgw-h2v7",
-        "cwe": "CWE-400"
+        "cve": "CVE-2020-28478",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-6g8v-hpgw-h2v7"
     },
-    "correct_cwe": "CWE-400",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/gsap/-/gsap-3.5.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/gsap.js",
+                    "lineno": 3333,
+                    "code": "config: function config(value) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/gsap.js",
+                    "lineno": 226,
+                    "code": "base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];"
+                }
+            },
+            {
+                "source": {
+                    "file": "dist/gsap.js",
+                    "lineno": 3329,
+                    "code": "defaults: function defaults(value) {"
+                },
+                "sink": {
+                    "file": "dist/gsap.js",
+                    "lineno": 226,
+                    "code": "base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-GSAP-1054614"
         }
     ],
     "patch": [
@@ -33,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,22 +1,20 @@
 {
     "advisory": {
         "id": "GHSA-3rh3-wfr4-76mj",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-21391",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-3rh3-wfr4-76mj"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/@ckeditor/ckeditor5-widget/-/ckeditor5-widget-26.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "src/widgetresize/resizerstate.js",
+                    "start_lineno": 129,
+                    "end_lineno": 129,
+                    "code": "if ( widthStyle && widthStyle.match( /^\\d+\\.?\\d*%$/ ) ) {"
                 }
             }
         ]
@@ -33,34 +31,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

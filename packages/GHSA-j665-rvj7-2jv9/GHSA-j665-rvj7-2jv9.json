@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-j665-rvj7-2jv9",
-        "cwe": "CWE-94"
+        "cve": "CVE-2020-7672",
+        "cwe": "CWE-94",
+        "github_link": "https://github.com/advisories/GHSA-j665-rvj7-2jv9"
     },
     "correct_cwe": "CWE-94",
     "correct_package_link": "https://registry.npmjs.org/mosc/-/mosc-1.0.0.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "mosc.js",
+                    "lineno": 14,
+                    "code": "this.parse_properties = function (key, properties, baseObject, eval_dict)"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "mosc.js",
+                    "lineno": 50,
+                    "code": "propertyBase[property_parts[0]] = eval(get_eval_string(pvalue));"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-MOSC-571492"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/418sec/mosc/pull/1"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "B"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "B"
         },
         "mosca": {
-            "score": ""
+            "score": "A"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

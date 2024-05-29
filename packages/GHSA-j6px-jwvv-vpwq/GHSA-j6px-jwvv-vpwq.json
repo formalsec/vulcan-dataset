@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-j6px-jwvv-vpwq",
-        "cwe": "CWE-74"
+        "cve": "CVE-2021-21277",
+        "cwe": "CWE-74",
+        "github_link": "https://github.com/advisories/GHSA-j6px-jwvv-vpwq"
     },
     "correct_cwe": "CWE-74",
     "correct_package_link": "https://registry.npmjs.org/angular-expressions/-/angular-expressions-1.1.1.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/parse.js",
+                    "lineno": 4180,
+                    "code": "parse: function(text) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/parse.js",
+                    "lineno": 3448,
+                    "code": "x + \".call(\" + [left.context].concat(args).join(\",\") + \")\";"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-j6px-jwvv-vpwq.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/peerigon/angular-expressions/commit/07edb62902b1f6127b3dcc013da61c6316dd0bf1"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

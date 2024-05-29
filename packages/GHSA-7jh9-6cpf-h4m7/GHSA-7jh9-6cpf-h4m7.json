@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-7jh9-6cpf-h4m7",
-        "cwe": "CWE-79"
+        "cve": "CVE-2020-7741",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-7jh9-6cpf-h4m7"
     },
     "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/hellojs/-/hellojs-1.18.4.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/hello.all.js",
+                    "lineno": 1440,
+                    "code": "responseHandler: function(window, parent) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/hello.all.js",
+                    "lineno": 1545,
+                    "code": "location.assign(decodeURIComponent(p.oauth_redirect));"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/MrSwitch/hello.js/commit/d6f5137f30de6e0ef7048191ee6ae575fdc2f669"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

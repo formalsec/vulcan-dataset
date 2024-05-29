@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-85cp-p426-42f5",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7715",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-85cp-p426-42f5"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/deep-get-set/-/deep-get-set-1.1.0.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 5,
+                    "code": "function deep (obj, path, value) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 30,
+                    "code": "obj[keys[i]] = value;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-DEEPGETSET-598666"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/acstll/deep-get-set/commit/a127e65bc77ff5707a6a103819e140d11475c5f4"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,29 +1,31 @@
 {
     "advisory": {
         "id": "GHSA-vrr3-5r3v-7xfw",
-        "cwe": "CWE-915"
+        "cve": "CVE-2020-7679",
+        "cwe": "CWE-915",
+        "github_link": "https://github.com/advisories/GHSA-vrr3-5r3v-7xfw"
     },
-    "correct_cwe": "CWE-915",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/casperjs/-/casperjs-1.1.4.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "modules/utils.js",
+                    "lineno": 680,
+                    "code": "function mergeObjects(origin, add, opts) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "modules/utils.js",
+                    "lineno": 701,
+                    "code": "origin[p] = add[p];"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-CASPERJS-572803"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

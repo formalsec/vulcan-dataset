@@ -1,66 +1,61 @@
 {
     "advisory": {
         "id": "GHSA-2v5f-23xc-v9qr",
-        "cwe": "CWE-79"
+        "cve": "CVE-2021-3377",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-2v5f-23xc-v9qr"
     },
     "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/ansi_up/-/ansi_up-4.0.4.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "ansi_up.js",
+                    "start_lineno": 123,
+                    "end_lineno": 123,
+                    "code": "return txt.replace(/[&<>]/gm, function (str) {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://doyensec.com/resources/Doyensec_Advisory_ansi_up4_XSS.pdf"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/drudru/ansi_up/commit/c8c726ed1db979bae4f257b7fa41775155ba2e27#diff-2696a3256db1de7cbb59a64bfae1693bdccfced0a223bdd6c538b68ad9f1f8f9"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

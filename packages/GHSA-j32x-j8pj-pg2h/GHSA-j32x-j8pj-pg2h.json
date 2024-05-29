@@ -1,11 +1,13 @@
 {
     "advisory": {
         "id": "GHSA-j32x-j8pj-pg2h",
+        "cve": "CVE-2020-28450",
         "cwe": [
             "CWE-94",
             "CWE-400",
             "CWE-1321"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-j32x-j8pj-pg2h"
     },
     "correct_cwe": [
         "CWE-94",
@@ -17,21 +19,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/utils/extend.js",
+                    "lineno": 23,
+                    "code": "module.exports = function extend (target, ...rest) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/utils/extend.js",
+                    "lineno": 49,
+                    "code": "target[name] = extend(clone, deep, copy)"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-DECAL-1051028"
         }
     ],
     "patch": [
@@ -41,34 +43,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

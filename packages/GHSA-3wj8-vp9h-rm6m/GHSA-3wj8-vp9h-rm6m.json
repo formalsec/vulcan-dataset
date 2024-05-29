@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-3wj8-vp9h-rm6m",
-        "cwe": "CWE-94"
+        "cve": "CVE-2021-23344",
+        "cwe": "CWE-94",
+        "github_link": "https://github.com/advisories/GHSA-3wj8-vp9h-rm6m"
     },
     "correct_cwe": "CWE-94",
     "correct_package_link": "https://registry.npmjs.org/total.js/-/total.js-3.4.6.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "utils.js",
+                    "lineno": 6606,
+                    "code": "exports.set = function(obj, path, value) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "utils.js",
+                    "lineno": 6624,
+                    "code": "var fn = new Function('w', 'a', 'b', a);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-TOTALJS-1077069"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/totaljs/framework/commit/c812bbcab8981797d3a1b9993fc42dad3d246f04"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

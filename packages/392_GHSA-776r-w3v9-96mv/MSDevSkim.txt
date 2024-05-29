@@ -1,1 +1,0 @@
-/src/CurrentWeather.php:33:14:33:20 [Moderate] DS137138 Insecure URL

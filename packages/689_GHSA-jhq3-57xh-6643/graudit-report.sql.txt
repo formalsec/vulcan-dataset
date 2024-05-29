@@ -1,3 +1,0 @@
-/src/server/utils/database.js-43-
-/src/server/utils/database.js:44:  mongoose.connect(mongoUri, mongoOptions)
-/src/server/utils/database.js-45-  return new Promise((resolve, reject) => {

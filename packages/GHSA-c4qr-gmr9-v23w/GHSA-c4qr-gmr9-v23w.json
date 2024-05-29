@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-c4qr-gmr9-v23w",
-        "cwe": "CWE-20"
+        "cve": "CVE-2021-21322",
+        "cwe": "CWE-20",
+        "github_link": "https://github.com/advisories/GHSA-c4qr-gmr9-v23w"
     },
     "correct_cwe": "CWE-20",
     "correct_package_link": "https://registry.npmjs.org/fastify-http-proxy/-/fastify-http-proxy-4.3.0.tgz",
@@ -9,14 +11,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 105,
+                    "code": "async function httpProxy (fastify, opts) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 123,
+                    "code": "fastify.register(From, fromOpts)"
+                }
+            },
+            {
+                "source": {
+                    "file": "index.js",
+                    "lineno": 69,
+                    "code": "function setupWebSocketProxy (fastify, options) {"
+                },
+                "sink": {
+                    "file": "index.js",
+                    "lineno": 78,
+                    "code": "const server = new WebSocket.Server({"
                 }
             }
         ]
@@ -28,39 +42,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/fastify/fastify-http-proxy/commit/02d9b43c770aa16bc44470edecfaeb7c17985016"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,3 +1,0 @@
-/src/lib/client.js-64-  api_url () {
-/src/lib/client.js:65:    return url.parse(
-/src/lib/client.js-66-      this.options.api.endsWith('/') ? this.options.api : this.options.api + '/'

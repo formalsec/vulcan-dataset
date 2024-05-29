@@ -1,35 +1,38 @@
 {
     "advisory": {
         "id": "GHSA-2548-q746-x5x6",
+        "cve": "CVE-2021-23359",
         "cwe": [
             "CWE-20",
             "CWE-77"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-2548-q746-x5x6"
     },
     "correct_cwe": [
         "CWE-20",
-        "CWE-77"
+        "CWE-77",
+        "CWE-78"
     ],
     "correct_package_link": "https://registry.npmjs.org/port-killer/-/port-killer-1.0.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 6,
+                    "code": "module.exports = port => {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 19,
+                    "code": "pid = execSync(`lsof -t -i:${port}`)"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-PORTKILLER-1078533"
         }
     ],
     "patch": [
@@ -39,34 +42,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

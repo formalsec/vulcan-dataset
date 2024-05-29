@@ -1,10 +1,12 @@
 {
     "advisory": {
         "id": "GHSA-mfwh-5m23-j46w",
+        "cve": "CVE-2020-15228",
         "cwe": [
             "CWE-20",
             "CWE-77"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-mfwh-5m23-j46w"
     },
     "correct_cwe": [
         "CWE-20",
@@ -15,14 +17,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/core.js",
+                    "lineno": 45,
+                    "code": "function exportVariable(name, val) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/command.js",
+                    "lineno": 23,
+                    "code": "process.stdout.write(cmd.toString() + os.EOL);"
                 }
             }
         ]
@@ -39,34 +41,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "B"
         }
     }
 }

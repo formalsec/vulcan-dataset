@@ -1,72 +1,68 @@
 {
     "advisory": {
         "id": "GHSA-cwx2-736x-mf6w",
+        "cve": "CVE-2020-15256",
         "cwe": [
             "CWE-20",
             "CWE-471"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-cwx2-736x-mf6w"
     },
-    "correct_cwe": [
-        "CWE-20",
-        "CWE-471"
-    ],
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/object-path/-/object-path-0.11.4.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 96,
+                    "code": "function set(obj, path, value, doNotReplace){"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 110,
+                    "code": "obj[currentPath] = value;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-cwx2-736x-mf6w.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/mariocasciaro/object-path/commit/2be3354c6c46215c7635eb1b76d80f1319403c68"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "B"
         }
     }
 }

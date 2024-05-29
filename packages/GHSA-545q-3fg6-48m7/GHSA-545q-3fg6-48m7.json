@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-545q-3fg6-48m7",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-23346",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-545q-3fg6-48m7"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/html-parse-stringify2/-/html-parse-stringify2-2.0.1.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/parse.js",
+                    "lineno": 2,
+                    "code": "var tagRE = /(?:<!--[\\S\\s]*?-->|<(?:\"[^\"]*\"['\"]*|'[^']*'['\"]*|[^'\">])+>)/g;"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/parse.js",
+                    "lineno": 39,
+                    "code": "html.replace(tagRE, function (tag, index) {"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/HenrikJoreteg/html-parse-stringify/commit/c7274a48e59c92b2b7e906fedf9065159e73fe12"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

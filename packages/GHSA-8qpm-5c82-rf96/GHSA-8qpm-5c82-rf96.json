@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-8qpm-5c82-rf96",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2021-20085",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-8qpm-5c82-rf96"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/backbone-query-parameters/-/backbone-query-parameters-0.4.0.tgz",
@@ -9,21 +11,33 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "backbone.queryparams.js",
+                    "lineno": 169,
+                    "code": "  _setParamValue: function(key, value, data) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "backbone.queryparams.js",
+                    "lineno": 181,
+                    "code": "_data = _data[part] = _data[part] || {};"
+                }
+            },
+            {
+                "source": {
+                    "file": "backbone.queryparams.js",
+                    "lineno": 169,
+                    "code": "  _setParamValue: function(key, value, data) {"
+                },
+                "sink": {
+                    "file": "backbone.queryparams.js",
+                    "lineno": 179,
+                    "code": "_data[part] = this._decodeParamValue(value, _data[part]);\n"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/BlackFan/client-side-prototype-pollution/blob/master/pp/backbone-qp.md"
         }
     ],
     "patch": [
@@ -33,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

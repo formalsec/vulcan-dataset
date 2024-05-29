@@ -1,66 +1,65 @@
 {
     "advisory": {
         "id": "GHSA-fpm5-vv97-jfwg",
-        "cwe": "CWE-400"
+        "cve": "CVE-2020-7765",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-fpm5-vv97-jfwg"
     },
-    "correct_cwe": "CWE-400",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/@firebase/util/-/util-0.3.3.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/index.node.cjs.js",
+                    "lineno": 395,
+                    "code": "function deepCopy(value) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/index.node.cjs.js",
+                    "lineno": 437,
+                    "code": "target[prop] = deepExtend(target[prop], source[prop]);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-FIREBASEUTIL-1038324"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/firebase/firebase-js-sdk/commit/9cf727fcc3d049551b16ae0698ac33dc2fe45ada"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

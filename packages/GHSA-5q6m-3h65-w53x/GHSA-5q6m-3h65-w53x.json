@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-5q6m-3h65-w53x",
-        "cwe": "CWE-78"
+        "cve": "CVE-2021-24033",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-5q6m-3h65-w53x"
     },
     "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-11.0.3.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "getProcessForPort.js",
+                    "lineno": 68,
+                    "code": "function getProcessForPort(port) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "getProcessForPort.js",
+                    "lineno": 28,
+                    "code": "return execSync('lsof -i:' + port + ' -P -t -sTCP:LISTEN', execOptions)"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/facebook/create-react-app/pull/10644"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/facebook/create-react-app/commit/f5e415f3a5b66f07dcc60aba1b445fa7cda97268"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

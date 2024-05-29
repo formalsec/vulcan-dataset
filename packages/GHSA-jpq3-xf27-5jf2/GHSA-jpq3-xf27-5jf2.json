@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-jpq3-xf27-5jf2",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7726",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-jpq3-xf27-5jf2"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/safe-object2/-/safe-object2-1.0.3.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 32,
+                    "code": "safeObject2.prototype.setter = function(paths, value) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 53,
+                    "code": "init[acc] = curValue;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-SAFEOBJECT2-598801"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

@@ -1,29 +1,43 @@
 {
     "advisory": {
         "id": "GHSA-vh8f-xw5v-8993",
-        "cwe": "CWE-74"
+        "cve": "CVE-2020-7786",
+        "cwe": "CWE-74",
+        "github_link": "https://github.com/advisories/GHSA-vh8f-xw5v-8993"
     },
-    "correct_cwe": "CWE-74",
+    "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/macfromip/-/macfromip-1.1.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "macfromip.js",
+                    "lineno": 64,
+                    "code": "macfromip.getMacInLinux = function(ipAddress, callback){"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "macfromip.js",
+                    "lineno": 66,
+                    "code": "var ls = cp.exec('ping  -c 1 ' + ipAddress,"
+                }
+            },
+            {
+                "source": {
+                    "file": "macfromip.js",
+                    "lineno": 95,
+                    "code": "macfromip.getMacInWin32 = function(ipAddress, callback){"
+                },
+                "sink": {
+                    "file": "macfromip.js",
+                    "lineno": 96,
+                    "code": "var ls = cp.exec('ping  ' + ipAddress + ' -n 1',"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-MACFROMIP-1048336"
         }
     ],
     "patch": [
@@ -33,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

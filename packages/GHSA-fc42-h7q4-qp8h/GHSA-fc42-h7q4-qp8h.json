@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-fc42-h7q4-qp8h",
-        "cwe": "CWE-77"
+        "cve": "CVE-2021-23360",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-fc42-h7q4-qp8h"
     },
     "correct_cwe": "CWE-77",
     "correct_package_link": "https://registry.npmjs.org/killport/-/killport-1.0.1.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 6,
+                    "code": "module.exports = function killport(port) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 9,
+                    "code": "cp.exec(cmd, function(err, stdout, stderr){"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-fc42-h7q4-qp8h.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/ssnau/killport/commit/bec8e371f170a12e11cd222ffc7a6e1ae9942638"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

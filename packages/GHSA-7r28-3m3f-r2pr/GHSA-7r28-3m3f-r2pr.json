@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-7r28-3m3f-r2pr",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-28092",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-7r28-3m3f-r2pr"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/is-svg/-/is-svg-4.2.1.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 24,
+                    "code": "const regex = /^\\s*(?:<\\?xml[^>]*>\\s*)?(?:<!doctype svg[^>]*\\s*(?:\\[?(?:\\s*<![^>]*>\\s*)*\\]?)*[^>]*>\\s*)?(?:<svg[^>]*>[^]*</svg>|<svg[^/>]*/\\s*>)\\s*$/i;"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 26,
+                    "code": "const isSvg = input => Boolean(input) && !isBinary(input) && regex.test(cleanEntities(input.toString()).replace(htmlCommentRegex, ''));"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/sindresorhus/is-svg/commit/01f8a087fab8a69c3ac9085fbb16035907ab6a5b"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,29 +1,35 @@
 {
     "advisory": {
         "id": "GHSA-qwp9-52h8-xgg8",
-        "cwe": "CWE-400"
+        "cve": "CVE-2020-28480",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-qwp9-52h8-xgg8"
     },
-    "correct_cwe": "CWE-400",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/jointjs/-/jointjs-3.2.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/joint.js",
+                    "lineno": 8537,
+                    "code": "var setByPath = function(obj, path, value, delimiter) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/joint.js",
+                    "lineno": 8549,
+                    "code": "diver[keys[len - 1]] = value;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": [
+                "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1062037",
+                "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1062036",
+                "https://security.snyk.io/vuln/SNYK-JS-JOINTJS-1024444"
+            ]
         }
     ],
     "patch": [
@@ -33,34 +39,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

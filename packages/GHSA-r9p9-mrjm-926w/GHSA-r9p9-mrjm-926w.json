@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-r9p9-mrjm-926w",
-        "cwe": "CWE-327"
+        "cve": "CVE-2020-28498",
+        "cwe": "CWE-327",
+        "github_link": "https://github.com/advisories/GHSA-r9p9-mrjm-926w"
     },
     "correct_cwe": "CWE-327",
     "correct_package_link": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/elliptic/ec/key.js",
+                    "lineno": 102,
+                    "code": "KeyPair.prototype.derive = function derive(pub) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/elliptic/ec/key.js",
+                    "lineno": 103,
+                    "code": "return pub.mul(this.priv).getX();"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/indutny/elliptic/commit/441b7428b0e8f6636c42118ad2aaa186d3c34c3f"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

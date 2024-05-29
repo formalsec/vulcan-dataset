@@ -1,10 +1,12 @@
 {
     "advisory": {
         "id": "GHSA-rrqm-p222-8ph2",
+        "cve": "CVE-2021-21304",
         "cwe": [
             "CWE-915",
             "CWE-1321"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-rrqm-p222-8ph2"
     },
     "correct_cwe": [
         "CWE-915",
@@ -39,34 +41,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

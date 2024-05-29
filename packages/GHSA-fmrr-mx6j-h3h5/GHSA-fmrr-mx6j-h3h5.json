@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-fmrr-mx6j-h3h5",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7714",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-fmrr-mx6j-h3h5"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/confucious/-/confucious-0.0.12.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "confucious.js",
+                    "lineno": 28,
+                    "code": "this.set = function (key, value) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "confucious.js",
+                    "lineno": 48,
+                    "code": "hash[lastSubKey] = value;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-CONFUCIOUS-598665"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

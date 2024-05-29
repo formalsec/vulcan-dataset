@@ -1,1 +1,0 @@
-url=url.replace(/\/%2e%2e/g,\"\"); //in function parseURL file lib/lactate.js

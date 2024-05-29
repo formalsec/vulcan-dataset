@@ -1,3 +1,0 @@
-/src/readme.md-28-
-/src/readme.md:29:var readStream = fs.createReadStream('cat.png')
-/src/readme.md-30-var concatStream = concat(gotPicture)

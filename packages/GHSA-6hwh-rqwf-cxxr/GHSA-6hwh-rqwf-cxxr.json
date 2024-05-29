@@ -1,72 +1,72 @@
 {
     "advisory": {
         "id": "GHSA-6hwh-rqwf-cxxr",
+        "cve": "CVE-2019-10806",
         "cwe": [
             "CWE-20",
             "CWE-915"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-6hwh-rqwf-cxxr"
     },
     "correct_cwe": [
         "CWE-20",
-        "CWE-915"
+        "CWE-915",
+        "CWE-1321"
     ],
     "correct_package_link": "https://registry.npmjs.org/vega-util/-/vega-util-1.13.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "build/vega-util.js",
+                    "lineno": 172,
+                    "code": "function mergeConfig(...configs) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "build/vega-util.js",
+                    "lineno": 203,
+                    "code": "o[k] = value[k];"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-VEGAUTIL-559223"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/vega/vega/commit/8f33a0b5170d7de4f12fc248ec0901234342367b"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

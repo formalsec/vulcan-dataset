@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-f2rp-38vg-j3gh",
-        "cwe": "CWE-88"
+        "cve": "CVE-2021-21384",
+        "cwe": "CWE-88",
+        "github_link": "https://github.com/advisories/GHSA-f2rp-38vg-j3gh"
     },
     "correct_cwe": "CWE-88",
     "correct_package_link": "https://registry.npmjs.org/shescape/-/shescape-1.1.2.tgz",
@@ -9,58 +11,67 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/unix.js",
+                    "lineno": 1,
+                    "code": "function escapeShellArg(arg) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/unix.js",
+                    "lineno": 2,
+                    "code": "return arg.replace(/'/g, `'\\\\''`);"
+                }
+            },
+            {
+                "source": {
+                    "file": "src/win.js",
+                    "lineno": 1,
+                    "code": "function escapeShellArg(arg) {"
+                },
+                "sink": {
+                    "file": "src/win.js",
+                    "lineno": 2,
+                    "code": "return arg.replace(/\"/g, `\"\"`);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/ericcornelissen/shescape/security/advisories/GHSA-f2rp-38vg-j3gh"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/ericcornelissen/shescape/commit/07a069a66423809cbedd61d980c11ca44a29ea2b"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "d"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

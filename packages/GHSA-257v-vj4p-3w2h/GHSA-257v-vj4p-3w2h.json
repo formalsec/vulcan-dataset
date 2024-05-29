@@ -1,22 +1,28 @@
 {
     "advisory": {
         "id": "GHSA-257v-vj4p-3w2h",
-        "cwe": "CWE-770"
+        "cve": "CVE-2021-29060",
+        "cwe": "CWE-770",
+        "github_link": "https://github.com/advisories/GHSA-257v-vj4p-3w2h"
     },
     "correct_cwe": "CWE-770",
     "correct_package_link": "https://registry.npmjs.org/color-string/-/color-string-1.5.4.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "index.js",
+                    "start_lineno": 153,
+                    "end_lineno": 153,
+                    "code": "var hwb = /^hwb\\(\\s*([+-]?\\d*[\\.]?\\d+)(?:deg)?\\s*,\\s*([+-]?[\\d\\.]+)%\\s*,\\s*([+-]?[\\d\\.]+)%\\s*(?:,\\s*([+-]?[\\d\\.]+)\\s*)?\\)$/;"
+                }
+            },
+            {
+                "block": {
+                    "file": "index.js",
+                    "start_lineno": 132,
+                    "end_lineno": 132,
+                    "code": "var hsl = /^hsla?\\(\\s*([+-]?(?:\\d*\\.)?\\d+)(?:deg)?\\s*,\\s*([+-]?[\\d\\.]+)%\\s*,\\s*([+-]?[\\d\\.]+)%\\s*(?:,\\s*([+-]?[\\d\\.]+)\\s*)?\\)$/;"
                 }
             }
         ]
@@ -28,39 +34,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/Qix-/color-string/commit/0789e21284c33d89ebc4ab4ca6f759b9375ac9d3"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,7 +1,8 @@
 {
     "advisory": {
         "id": "GHSA-xmh9-rg6f-j3mr",
-        "cwe": "CWE-290"
+        "cwe": "CWE-290",
+        "github_link": "https://github.com/advisories/GHSA-xmh9-rg6f-j3mr"
     },
     "correct_cwe": "CWE-290",
     "correct_package_link": "https://registry.npmjs.org/@solid/identity-token-verifier/-/identity-token-verifier-0.5.1.tgz",
@@ -9,14 +10,50 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/lib/DPoP.js",
+                    "lineno": 13,
+                    "code": "function isValidProof(accessToken, dpop, method, url, isDuplicateJTI) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/lib/DPoP.js",
+                    "lineno": 17,
+                    "code": "ts_guards_1.asserts.isLiteral(dpop.header.jwk.kid, accessToken.payload.cnf.jkt);"
+                }
+            },
+            {
+                "source": {
+                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "lineno": 42,
+                    "code": "function isECPublicJWK(x) {"
+                },
+                "sink": {
+                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "lineno": 43,
+                    "code": "ts_guards_1.asserts.areObjectPropertiesOf(x, [\"kid\", \"kty\", \"crv\", \"x\", \"y\"]); ts_guards_1.asserts.isString(x.kid);"
+                }
+            },
+            {
+                "source": {
+                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "lineno": 63,
+                    "code": "function isRSAPublicJWK(x) {"
+                },
+                "sink": {
+                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "lineno": 64,
+                    "code": "ts_guards_1.asserts.areObjectPropertiesOf(x, [\"alg\", \"kid\", \"kty\", \"n\", \"e\"]);"
+                }
+            },
+            {
+                "source": {
+                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "lineno": 63,
+                    "code": "function isRSAPublicJWK(x) {"
+                },
+                "sink": {
+                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "lineno": 66,
+                    "code": "asserts.isString(x.kid);"
                 }
             }
         ]
@@ -28,39 +65,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/CommunitySolidServer/access-token-verifier/commit/fbdeb4aa8c12694b3744cd0454acb826817d9e6c"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

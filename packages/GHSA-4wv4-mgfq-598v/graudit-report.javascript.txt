@@ -1,3 +1,0 @@
-/src/lib/index.js-12-    constructor(data) {
-/src/lib/index.js:13:        this.laureates = eval(`(${data})`).laureates;
-/src/lib/index.js-14-    }

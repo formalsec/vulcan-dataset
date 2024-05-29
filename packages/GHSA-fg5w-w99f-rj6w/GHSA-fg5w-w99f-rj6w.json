@@ -1,66 +1,65 @@
 {
     "advisory": {
         "id": "GHSA-fg5w-w99f-rj6w",
-        "cwe": "CWE-77"
+        "cve": "CVE-2021-29300",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-fg5w-w99f-rj6w"
     },
-    "correct_cwe": "CWE-77",
+    "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/@ronomon/opened/-/opened-1.5.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 75,
+                    "code": "Unix.files = function(paths, end) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 92,
+                    "code": "Node.child.exec(command, options,"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-fg5w-w99f-rj6w.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/ronomon/opened/commit/7effe011d4fea8fac7f78c00615e0a6e69af68ec"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

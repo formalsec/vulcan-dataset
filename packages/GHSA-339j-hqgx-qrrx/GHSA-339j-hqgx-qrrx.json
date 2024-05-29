@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-339j-hqgx-qrrx",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2021-23395",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-339j-hqgx-qrrx"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/datastore.js",
+                    "lineno": 654,
+                    "code": "Datastore.prototype.update = function () {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/model.js",
+                    "lineno": 253,
+                    "code": "obj[field] = value;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-NEDB-1305279"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

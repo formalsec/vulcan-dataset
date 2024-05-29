@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-vhhw-xjvf-wprr",
-        "cwe": "CWE-77"
+        "cve": "CVE-2021-23326",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-vhhw-xjvf-wprr"
     },
     "correct_cwe": "CWE-77",
     "correct_package_link": "https://registry.npmjs.org/@graphql-tools/git-loader/-/git-loader-6.2.5.tgz",
@@ -9,26 +11,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "index.esm.js",
-                    "lineno": 12,
+                    "file": "index.cjs.js",
+                    "lineno": 16,
                     "code": "async function loadFromGit(input) {"
                 },
                 "sink": {
-                    "file": "index.esm.js",
-                    "lineno": 15,
-                    "code": "exec(createCommand(input), { encoding: 'utf-8', maxBuffer: 1024 * 1024 * 1024 }, (error, stdout) => {"
+                    "file": "index.cjs.js",
+                    "lineno": 19,
+                    "code": "child_process.exec(createCommand(input), { encoding: 'utf-8', maxBuffer: 1024 * 1024 * 1024 }, (error, stdout) => {"
                 }
             },
             {
                 "source": {
-                    "file": "index.esm.js",
-                    "lineno": 32,
+                    "file": "index.cjs.js",
+                    "lineno": 36,
                     "code": "function loadFromGitSync(input) {"
                 },
                 "sink": {
-                    "file": "index.esm.js",
-                    "lineno": 34,
-                    "code": "return execSync(createCommand(input), { encoding: 'utf-8' });"
+                    "file": "index.cjs.js",
+                    "lineno": 38,
+                    "code": "return child_process.execSync(createCommand(input), { encoding: 'utf-8' });"
                 }
             }
         ]
@@ -45,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,66 +1,65 @@
 {
     "advisory": {
         "id": "GHSA-g4hj-r7r3-9rwv",
-        "cwe": "CWE-98"
+        "cve": "CVE-2020-7601",
+        "cwe": "CWE-98",
+        "github_link": "https://github.com/advisories/GHSA-g4hj-r7r3-9rwv"
     },
-    "correct_cwe": "CWE-98",
+    "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/gulp-scss-lint/-/gulp-scss-lint-1.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/command.js",
+                    "lineno": 42,
+                    "code": "function execCommand(command, options) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/command.js",
+                    "lineno": 61,
+                    "code": "child_process.exec(command, commandOptions, function(error, report) {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-g4hj-r7r3-9rwv.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/juanfran/gulp-scss-lint/pull/93"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

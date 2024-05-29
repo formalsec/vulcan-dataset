@@ -1,72 +1,95 @@
 {
     "advisory": {
         "id": "GHSA-753c-phhg-cj29",
+        "cve": "CVE-2021-23352",
         "cwe": [
             "CWE-77",
             "CWE-89"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-753c-phhg-cj29"
     },
     "correct_cwe": [
         "CWE-77",
-        "CWE-89"
+        "CWE-78"
     ],
     "correct_package_link": "https://registry.npmjs.org/madge/-/madge-4.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/api.js",
+                    "lineno": 179,
+                    "code": "image(imagePath, circularOnly) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/graph.js",
+                    "lineno": 28,
+                    "code": "return exec(cmd)"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/api.js",
+                    "lineno": 197,
+                    "code": "svg() {"
+                },
+                "sink": {
+                    "file": "lib/graph.js",
+                    "lineno": 28,
+                    "code": "return exec(cmd)"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/api.js",
+                    "lineno": 164,
+                    "code": "dot(circularOnly) {"
+                },
+                "sink": {
+                    "file": "lib/graph.js",
+                    "lineno": 28,
+                    "code": "return exec(cmd)"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-MADGE-1082875"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/pahen/madge/commit/da5cbc9ab30372d687fa7c324b22af7ffa5c6332"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

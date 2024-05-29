@@ -1,29 +1,31 @@
 {
     "advisory": {
         "id": "GHSA-q4h8-7qff-gh6c",
-        "cwe": "CWE-918"
+        "cve": "CVE-2020-8134",
+        "cwe": "CWE-918",
+        "github_link": "https://github.com/advisories/GHSA-q4h8-7qff-gh6c"
     },
     "correct_cwe": "CWE-918",
-    "correct_package_link": "https://registry.npmjs.org/ghost/-/ghost-2.38.3.tgz",
+    "correct_package_link": "https://registry.npmjs.org/ghost/-/ghost-3.5.2.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "core/server/api/canary/oembed.js",
+                    "lineno": 70,
+                    "code": "const getOembedUrlFromHTML = (html) => {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "core/server/api/canary/oembed.js",
+                    "lineno": 71,
+                    "code": "return cheerio('link[type=\"application/json+oembed\"]', html).attr('href');"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://hackerone.com/reports/793704"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

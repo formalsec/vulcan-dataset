@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-p6j9-7xhc-rhwp",
-        "cwe": "CWE-20"
+        "cve": "CVE-2021-27516",
+        "cwe": "CWE-20",
+        "github_link": "https://github.com/advisories/GHSA-p6j9-7xhc-rhwp"
     },
     "correct_cwe": "CWE-20",
     "correct_package_link": "https://registry.npmjs.org/urijs/-/urijs-1.19.5.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/URI.js",
+                    "lineno": 35,
+                    "code": "function URI(url, base) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/URI.js",
+                    "lineno": 529,
+                    "code": "} else if (string.substring(pos + 1, pos + 3) === '//') {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://advisory.checkmarx.net/advisory/CX-2021-4305/"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/medialize/URI.js/commit/a1ad8bcbc39a4d136d7e252e76e957f3ece70839"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

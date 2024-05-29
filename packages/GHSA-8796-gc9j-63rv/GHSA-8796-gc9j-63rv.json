@@ -1,7 +1,8 @@
 {
     "advisory": {
         "id": "GHSA-8796-gc9j-63rv",
-        "cwe": "CWE-74"
+        "cwe": "CWE-74",
+        "github_link": "https://github.com/advisories/GHSA-8796-gc9j-63rv"
     },
     "correct_cwe": "CWE-74",
     "correct_package_link": "https://registry.npmjs.org/matrix-react-sdk/-/matrix-react-sdk-3.20.0.tgz",
@@ -9,14 +10,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/utils/DecryptFile.js",
+                    "lineno": 73,
+                    "code": "function decryptFile(file"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/utils/DecryptFile.js",
+                    "lineno": 100,
+                    "code": "return new Blob([dataArray], { type: mimetype });"
                 }
             }
         ]
@@ -28,39 +29,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/matrix-org/matrix-react-sdk/pull/5981/files"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

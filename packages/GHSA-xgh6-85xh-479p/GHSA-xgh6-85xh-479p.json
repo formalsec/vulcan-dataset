@@ -1,22 +1,23 @@
 {
     "advisory": {
         "id": "GHSA-xgh6-85xh-479p",
-        "cwe": []
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-xgh6-85xh-479p"
     },
-    "correct_cwe": [],
+    "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/npm-user-validate/-/npm-user-validate-1.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "npm-user-validate.js",
+                    "lineno": 47,
+                    "code": "function email (em) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "npm-user-validate.js",
+                    "lineno": 48,
+                    "code": "if (!em.match(/^.+@.+\\..+$/)) {"
                 }
             }
         ]
@@ -33,34 +34,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

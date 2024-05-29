@@ -1,22 +1,20 @@
 {
     "advisory": {
         "id": "GHSA-xr9h-9m79-x29g",
-        "cwe": "CWE-918"
+        "cve": "CVE-2020-8902",
+        "cwe": "CWE-918",
+        "github_link": "https://github.com/advisories/GHSA-xr9h-9m79-x29g"
     },
     "correct_cwe": "CWE-918",
     "correct_package_link": "https://registry.npmjs.org/rendertron/-/rendertron-2.0.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "build/rendertron.js",
+                    "start_lineno": 53,
+                    "end_lineno": 60,
+                    "code": "restricted(href) { const parsedUrl = url.parse(href); const protocol = parsedUrl.protocol || ''; if (!protocol.match(/^https?/)) { return true; } return false;"
                 }
             }
         ]
@@ -28,39 +26,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/GoogleChrome/rendertron/commit/8aeeda7765101b705d5c8c2801ec81c1d43df40e"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "B"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,22 +1,28 @@
 {
     "advisory": {
         "id": "GHSA-52mq-6jcv-j79x",
-        "cwe": "CWE-345"
+        "cve": "CVE-2021-21320",
+        "cwe": "CWE-345",
+        "github_link": "https://github.com/advisories/GHSA-52mq-6jcv-j79x"
     },
     "correct_cwe": "CWE-345",
     "correct_package_link": "https://registry.npmjs.org/matrix-react-sdk/-/matrix-react-sdk-3.14.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "src/usercontent/index.js",
+                    "start_lineno": 1,
+                    "end_lineno": 6,
+                    "code": "const params = window.location.search.substring(1).split('&'); let lockOrigin; for (let i = 0; i < params.length; ++i) { const parts = params[i].split('='); if (parts[0] === 'origin') lockOrigin = decodeURIComponent(parts[1]); }onst contentEncoding = source.headers['content-encoding'];\nconst decoder = (this.settings.decoders || internals.decoders)[contentEncoding];\nif (decoder) {\nconst decoderOptions = (this.settings.compression && this.settings.compression[contentEncoding]) || null;\nconst stream = decoder(decoderOptions);"
+                }
+            },
+            {
+                "block": {
+                    "file": "src/components/views/messages/MFileBody.js",
+                    "start_lineno": 291,
+                    "end_lineno": 291,
+                    "code": "src={`${url}?origin=${encodeURIComponent(window.location.origin)}`}"
                 }
             }
         ]
@@ -28,39 +34,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/matrix-org/matrix-react-sdk/commit/b386f0c73b95ecbb6ea7f8f79c6ff5171a8dedd1#diff-15e77fa5a9955f111e58faf80b8d44ab81b4dab5e6f9f8273fc4e6eeb06793d6"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "B"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

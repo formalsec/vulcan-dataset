@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-qc65-cgvr-93p6",
-        "cwe": "CWE-77"
+        "cve": "CVE-2021-23356",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-qc65-cgvr-93p6"
     },
     "correct_cwe": "CWE-77",
     "correct_package_link": "https://registry.npmjs.org/kill-process-by-name/-/kill-process-by-name-1.0.5.tgz",
@@ -45,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

@@ -1,7 +1,8 @@
 {
     "advisory": {
-        "id": "GHSA-7r96-8g3x-g36m",
-        "cwe": "CWE-347"
+        "id": "GHSA-5w25-hxp5-h8c9",
+        "cwe": "CWE-347",
+        "github_link": "https://github.com/advisories/GHSA-7r96-8g3x-g36m"
     },
     "correct_cwe": "CWE-347",
     "correct_package_link": "https://registry.npmjs.org/tenvoy/-/tenvoy-7.0.2.tgz",
@@ -9,14 +10,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "node/tenvoy.js",
+                    "lineno": 2158,
+                    "code": "this.verifyWithMessage = (signed, message, password = null) => {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "node/tenvoy.js",
+                    "lineno": 2169,
+                    "code": "return this.verify(signed, password) && _tEnvoy.util.bytesToHex(_nacl.hash(_tEnvoy.util.pack(message))) == _tEnvoy.util.bytesToHex(hash);"
                 }
             }
         ]
@@ -28,39 +29,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/TogaTech/tEnvoy/commit/a121b34a45e289d775c62e58841522891dee686b"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

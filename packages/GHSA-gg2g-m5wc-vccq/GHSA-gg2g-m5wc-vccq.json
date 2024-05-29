@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-gg2g-m5wc-vccq",
-        "cwe": "CWE-527"
+        "cve": "CVE-2021-21423",
+        "cwe": "CWE-527",
+        "github_link": "https://github.com/advisories/GHSA-gg2g-m5wc-vccq"
     },
     "correct_cwe": "CWE-527",
     "correct_package_link": "https://registry.npmjs.org/projen/-/projen-0.16.40.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/node-project.js",
+                    "lineno": 547,
+                    "code": "addRebuildBot(command) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/node-project.js",
+                    "lineno": 557,
+                    "code": "trigger: { issue_comment: { types: ['created'] } },"
                 }
             }
         ]
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

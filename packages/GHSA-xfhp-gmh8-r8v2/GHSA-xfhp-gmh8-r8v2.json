@@ -1,66 +1,61 @@
 {
     "advisory": {
         "id": "GHSA-xfhp-gmh8-r8v2",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-23354",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-xfhp-gmh8-r8v2"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/printf/-/printf-0.6.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "lib/printf.js",
+                    "start_lineno": 44,
+                    "end_lineno": 44,
+                    "code": "Formatter.prototype._re = /\\%(?:\\(([\\w_.]+)\\)|([1-9]\\d*)\\$)?([0 +\\-\\#]*)(\\*|\\d+)?(\\.)?(\\*|\\d+)?[hlL]?([\\%bscdeEfFgGioOuxX])/g;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/adaltas/node-printf/issues/31"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/adaltas/node-printf/commit/a8502e7c9b0b22555696a2d8ef67722086413a68"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

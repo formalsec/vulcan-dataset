@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-cgc7-mwp4-3ccx",
-        "cwe": "CWE-79"
+        "cve": "CVE-2020-15930",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-cgc7-mwp4-3ccx"
     },
     "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/joplin/-/joplin-1.1.2.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/joplin-renderer/htmlUtils.js",
+                    "lineno": 39,
+                    "code": "const disallowedTags = ['script', 'iframe', 'frameset', 'frame', 'object', 'base', 'embed'];"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/joplin-renderer/htmlUtils.js",
+                    "lineno": 160,
+                    "code": "parser.write(html);"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/laurent22/joplin/commit/57d750bc9aeb0f98d53ed4b924458b54984c15ff"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

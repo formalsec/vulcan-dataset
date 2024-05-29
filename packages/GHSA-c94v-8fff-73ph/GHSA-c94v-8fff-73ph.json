@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-c94v-8fff-73ph",
-        "cwe": "CWE-829"
+        "cve": "CVE-2021-28162",
+        "cwe": "CWE-829",
+        "github_link": "https://github.com/advisories/GHSA-c94v-8fff-73ph"
     },
     "correct_cwe": "CWE-829",
     "correct_package_link": "https://registry.npmjs.org/@theia/messages/-/messages-0.16.1.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/browser/notifications-manager.js",
+                    "lineno": 242,
+                    "code": "NotificationManager.prototype.renderMessage = function (content) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/browser/notifications-manager.js",
+                    "lineno": 244,
+                    "code": "return this.mdEngine.renderInline(contentWithoutNewlines);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/eclipse-theia/theia/issues/7283"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

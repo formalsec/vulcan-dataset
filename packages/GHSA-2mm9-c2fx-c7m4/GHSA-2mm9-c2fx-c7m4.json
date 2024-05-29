@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-2mm9-c2fx-c7m4",
-        "cwe": "CWE-79"
+        "cve": "CVE-2021-23342",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-2mm9-c2fx-c7m4"
     },
     "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/docsify/-/docsify-4.11.6.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/docsify.js",
+                    "lineno": 8211,
+                    "code": "function isExternal(url) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/docsify.js",
+                    "lineno": 8212,
+                    "code": "var match = url.match( /^([^:/?#]+:)?(?://([^/?#]*))?([^?#]+)?(\\?[^#]*)?(#.*)?/"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/docsifyjs/docsify/commit/ff2a66f12752471277fe81a64ad6c4b2c08111fe"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

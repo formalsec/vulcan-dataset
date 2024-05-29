@@ -1,2 +1,0 @@
-63a64
->               filename = filename.replace(/\/\.\./, "").replace(/\.\.\//, "");

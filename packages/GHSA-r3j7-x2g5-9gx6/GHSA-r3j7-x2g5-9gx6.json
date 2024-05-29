@@ -1,11 +1,13 @@
 {
     "advisory": {
         "id": "GHSA-r3j7-x2g5-9gx6",
+        "cve": "CVE-2021-27185",
         "cwe": [
             "CWE-74",
             "CWE-77",
             "CWE-78"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-r3j7-x2g5-9gx6"
     },
     "correct_cwe": [
         "CWE-74",
@@ -101,34 +103,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

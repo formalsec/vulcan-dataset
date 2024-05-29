@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-f8fh-8rgm-227h",
-        "cwe": "CWE-78"
+        "cve": "CVE-2020-7602",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-f8fh-8rgm-227h"
     },
     "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/node-prompt-here/-/node-prompt-here-1.0.1.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 7,
+                    "code": "PromtHere.prototype.open = function(dir) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 19,
+                    "code": "child_process.exec(cmd);"
                 }
             }
         ]
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

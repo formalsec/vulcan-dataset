@@ -1,22 +1,20 @@
 {
     "advisory": {
         "id": "GHSA-78cj-fxph-m83p",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-27292",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-78cj-fxph-m83p"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.23.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "src/ua-parser.js",
+                    "start_lineno": 623,
+                    "end_lineno": 623,
+                    "code": "/android.+[;\\/]\\s+(TM\\d{3}.*\b)\\s+build/i      // Barnes & Noble Tablet"
                 }
             }
         ]
@@ -28,39 +26,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/faisalman/ua-parser-js/commit/809439e20e273ce0d25c1d04e111dcf6011eb566"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

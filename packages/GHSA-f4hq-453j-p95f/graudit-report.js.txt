@@ -1,3 +1,0 @@
-/src/index.js-15-  return function (req, res, next) {
-/src/index.js:16:    var pathname = url.parse(req.url).pathname;
-/src/index.js-17-    

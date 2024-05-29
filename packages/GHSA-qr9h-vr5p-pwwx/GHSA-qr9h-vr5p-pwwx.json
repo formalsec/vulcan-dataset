@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-qr9h-vr5p-pwwx",
-        "cwe": "CWE-755"
+        "cve": "CVE-2020-27543",
+        "cwe": "CWE-755",
+        "github_link": "https://github.com/advisories/GHSA-qr9h-vr5p-pwwx"
     },
     "correct_cwe": "CWE-755",
     "correct_package_link": "https://registry.npmjs.org/restify-paginate/-/restify-paginate-0.0.5.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 17,
+                    "code": "return function (req, res, next) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 35,
+                    "code": "baseUrl += req.headers.host.replace(//$/, '') + '/';"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/secoats/cve/tree/master/CVE-2020-27543_dos_restify-paginate"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

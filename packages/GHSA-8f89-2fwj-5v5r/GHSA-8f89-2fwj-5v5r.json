@@ -1,66 +1,65 @@
 {
     "advisory": {
         "id": "GHSA-8f89-2fwj-5v5r",
-        "cwe": "CWE-20"
+        "cve": "CVE-2020-8125",
+        "cwe": "CWE-20",
+        "github_link": "https://github.com/advisories/GHSA-8f89-2fwj-5v5r"
     },
-    "correct_cwe": "CWE-20",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/klona/-/klona-1.1.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/klona.js",
+                    "lineno": 1,
+                    "code": "module.exports = function klona(x) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "dist/klona.js",
+                    "lineno": 9,
+                    "code": "tmp[k] = index(x[k]);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://hackerone.com/reports/778414"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/lukeed/klona/commit/200e8d1fd383a54790ee6fc8228264c21954e38e"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

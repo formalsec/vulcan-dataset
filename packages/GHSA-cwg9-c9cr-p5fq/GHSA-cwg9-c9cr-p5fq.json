@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-cwg9-c9cr-p5fq",
-        "cwe": "CWE-79"
+        "cve": "CVE-2021-28161",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-cwg9-c9cr-p5fq"
     },
     "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/@theia/console/-/console-1.8.0.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/browser/ansi-console-item.js",
+                    "lineno": 22,
+                    "code": "function AnsiConsoleItem(content, severity) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/browser/ansi-console-item.js",
+                    "lineno": 38,
+                    "code": "return React.createElement(\"div\", { className: 'theia-console-ansi-console-item', dangerouslySetInnerHTML: { __html: this.htmlContent } });"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/eclipse-theia/theia/issues/8794"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "B"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

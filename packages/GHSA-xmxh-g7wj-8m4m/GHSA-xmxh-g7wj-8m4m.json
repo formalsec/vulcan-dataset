@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-xmxh-g7wj-8m4m",
-        "cwe": "CWE-78"
+        "cve": "CVE-2019-10789",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-xmxh-g7wj-8m4m"
     },
     "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/curling/-/curling-1.0.0.tgz",
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

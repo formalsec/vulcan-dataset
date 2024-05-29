@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-h33p-5j96-w8qh",
-        "cwe": "CWE-78"
+        "cve": "CVE-2020-7607",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-h33p-5j96-w8qh"
     },
     "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/gulp-styledocco/-/gulp-styledocco-0.0.3.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 9,
+                    "code": "module.exports = function (options) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 72,
+                    "code": "exec(bin + args.join(' '), function (error, stdout, stderr) {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-h33p-5j96-w8qh.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/konitter/gulp-styledocco/pull/8"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

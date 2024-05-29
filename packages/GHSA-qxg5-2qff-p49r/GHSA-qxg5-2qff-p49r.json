@@ -1,14 +1,15 @@
 {
     "advisory": {
         "id": "GHSA-qxg5-2qff-p49r",
+        "cve": "CVE-2021-32696",
         "cwe": [
             "CWE-79",
             "CWE-241",
             "CWE-843"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-qxg5-2qff-p49r"
     },
     "correct_cwe": [
-        "CWE-79",
         "CWE-241",
         "CWE-843"
     ],
@@ -16,15 +17,11 @@
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "src/striptags.js",
+                    "start_lineno": 58,
+                    "end_lineno": 188,
+                    "code": "Code is too large"
                 }
             }
         ]
@@ -36,39 +33,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/ericnorris/striptags/commit/f252a6b0819499cd65403707ebaf5cc925f2faca#diff-ab7f358b311e6e3331e582c5a7e351dc3a3c92008b9e4592889d78475936d626"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

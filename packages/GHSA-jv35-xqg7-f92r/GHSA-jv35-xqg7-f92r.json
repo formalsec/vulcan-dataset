@@ -1,10 +1,12 @@
 {
     "advisory": {
         "id": "GHSA-jv35-xqg7-f92r",
+        "cve": "CVE-2021-25949",
         "cwe": [
             "CWE-915",
             "CWE-1321"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-jv35-xqg7-f92r"
     },
     "correct_cwe": [
         "CWE-915",
@@ -15,58 +17,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 27,
+                    "code": "function setGetter(obj, prop, getter) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 72,
+                    "code": "Object.defineProperty(obj, prop, { configurable: true, enumerable: true, get: getter });"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://www.mend.io/vulnerability-database/CVE-2021-25949"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/doowb/set-getter/commit/66eb3f0d4686a4a8c7c3d6f7ecd8e570b580edc4"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

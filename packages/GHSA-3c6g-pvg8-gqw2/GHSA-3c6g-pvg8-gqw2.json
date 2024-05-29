@@ -1,66 +1,65 @@
 {
     "advisory": {
         "id": "GHSA-3c6g-pvg8-gqw2",
-        "cwe": "CWE-78"
+        "cve": "CVE-2020-7712",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-3c6g-pvg8-gqw2"
     },
-    "correct_cwe": "CWE-78",
+    "correct_cwe": "CWE-74",
     "correct_package_link": "https://registry.npmjs.org/json/-/json-9.0.6.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/json.js",
+                    "lineno": 764,
+                    "code": "function parseLookup(lookup, lookupDelim) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/json.js",
+                    "lineno": 828,
+                    "code": "var evaled = vm.runInNewContext("
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/trentm/json/issues/144"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/trentm/json/commit/cc4798169f9e0f181f8aa61905b88479badcd483#diff-d52327d893de06d159266c2904764245c93122e778b698a719298976ef976d60"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "B"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

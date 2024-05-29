@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-v659-54cx-g4qr",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2021-25941",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-v659-54cx-g4qr"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/deep-override/-/deep-override-1.0.1.tgz",
@@ -23,7 +25,7 @@
     },
     "poc": [
         {
-            "url": "./poc.js"
+            "file_path": "GHSA-v659-54cx-g4qr.poc.js"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

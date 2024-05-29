@@ -1,10 +1,12 @@
 {
     "advisory": {
         "id": "GHSA-487w-pqcm-63hq",
+        "cve": "CVE-2020-7794",
         "cwe": [
             "CWE-77",
             "CWE-78"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-487w-pqcm-63hq"
     },
     "correct_cwe": [
         "CWE-77",
@@ -15,21 +17,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/index.js",
+                    "lineno": 652,
+                    "code": "install: function(requestedModule) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/index.js",
+                    "lineno": 678,
+                    "code": "exec(command);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-BUNS-1050389"
         }
     ],
     "patch": [
@@ -39,34 +41,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

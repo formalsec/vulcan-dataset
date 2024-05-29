@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-gh78-48h3-frjq",
-        "cwe": "CWE-755"
+        "cve": "CVE-2020-13410",
+        "cwe": "CWE-755",
+        "github_link": "https://github.com/advisories/GHSA-gh78-48h3-frjq"
     },
     "correct_cwe": "CWE-755",
     "correct_package_link": "https://registry.npmjs.org/aedes/-/aedes-0.42.0.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/write.js",
+                    "lineno": 5,
+                    "code": "function write (client, packet, done) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/write.js",
+                    "lineno": 7,
+                    "code": "const result = mqtt.writeToStream(packet, client.conn)"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/moscajs/aedes/commit/8d34ee5819cfc983d57e49b45d8c5ef70a76d79b"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

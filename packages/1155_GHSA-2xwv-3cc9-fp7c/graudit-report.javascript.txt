@@ -1,3 +1,0 @@
-/src/lib/transport.js-348-        maxFreeSockets: Infinity,
-/src/lib/transport.js:349:        rejectUnauthorized: false
-/src/lib/transport.js-350-      })

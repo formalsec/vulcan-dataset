@@ -1,29 +1,34 @@
 {
     "advisory": {
         "id": "GHSA-7qmm-q394-fmch",
-        "cwe": "CWE-77"
+        "cve": "CVE-2021-23355",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-7qmm-q394-fmch"
     },
-    "correct_cwe": "CWE-77",
+    "correct_cwe": [
+        "CWE-77",
+        "CWE-78"
+    ],
     "correct_package_link": "https://registry.npmjs.org/ps-kill/-/ps-kill-1.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 5,
+                    "code": "var kill = function (pid, callback) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 8,
+                    "code": "exec(cmd, function (error) {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-PSKILL-1078529"
         }
     ],
     "patch": [
@@ -33,34 +38,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "A"
         }
     }
 }

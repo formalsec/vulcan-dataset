@@ -1,22 +1,20 @@
 {
     "advisory": {
         "id": "GHSA-57f3-gghm-9mhc",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-23353",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-57f3-gghm-9mhc"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/jspdf/-/jspdf-2.3.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "dist/jspdf.es.js",
+                    "start_lineno": 10699,
+                    "end_lineno": 10699,
+                    "code": "var extractedInfo = /^data:(\\w*/\\w*);*(charset=[\\w=-]*)*;*$/.exec("
                 }
             }
         ]
@@ -28,39 +26,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/parallax/jsPDF/commit/d8bb3b39efcd129994f7a3b01b632164144ec43e"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

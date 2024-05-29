@@ -1,29 +1,31 @@
 {
     "advisory": {
         "id": "GHSA-8vv3-jxm8-f4vf",
-        "cwe": "CWE-915"
+        "cve": "CVE-2020-7706",
+        "cwe": "CWE-915",
+        "github_link": "https://github.com/advisories/GHSA-8vv3-jxm8-f4vf"
     },
-    "correct_cwe": "CWE-915",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/connie-lang/-/connie-lang-0.1.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/connie-lang.js",
+                    "lineno": 71,
+                    "code": "getEntries: function(config) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/connie-lang.js",
+                    "lineno": 86,
+                    "code": "entries.push({key: prefix, value: value});\n"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-CONNIELANG-598853"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

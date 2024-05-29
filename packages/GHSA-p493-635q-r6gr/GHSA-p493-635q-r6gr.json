@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-p493-635q-r6gr",
-        "cwe": "CWE-74"
+        "cve": "CVE-2021-21353",
+        "cwe": "CWE-74",
+        "github_link": "https://github.com/advisories/GHSA-p493-635q-r6gr"
     },
     "correct_cwe": "CWE-74",
     "correct_package_link": "https://registry.npmjs.org/pug-code-gen/-/pug-code-gen-3.0.1.tgz",
@@ -9,58 +11,67 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 452,
+                    "code": "visitMixinBlock: function(block) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 454,
+                    "code": "this.buf.push( \"pug_indent.push('\" + Array(this.indents + 1).join(this.pp) + \"');\");"
+                }
+            },
+            {
+                "source": {
+                    "file": "index.js",
+                    "lineno": 487,
+                    "code": "visitMixin: function(mixin) {"
+                },
+                "sink": {
+                    "file": "index.js",
+                    "lineno": 506,
+                    "code": "this.buf.push( \"pug_indent.push('\" + Array(this.indents + 1).join(pp) + \"');\"):"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/pugjs/pug/issues/3312"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/pugjs/pug/commit/991e78f7c4220b2f8da042877c6f0ef5a4683be0"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

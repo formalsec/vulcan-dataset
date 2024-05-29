@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-4q97-fh3f-j294",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7724",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-4q97-fh3f-j294"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/tiny-conf/-/tiny-conf-1.1.0.tgz",
@@ -9,58 +11,55 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "tiny-conf.js",
+                    "lineno": 46,
+                    "code": "set: function (key, val) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "tiny-conf.js",
+                    "lineno": 73,
+                    "code": "target[key] = val;"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-TINYCONF-598792"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/tiny-conf/tiny-conf/commit/1f7be78bc68927996647cd45b4367f8975a3ea05"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

@@ -1,22 +1,36 @@
 {
     "advisory": {
         "id": "GHSA-q8pj-2vqx-8ggc",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-33587",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-q8pj-2vqx-8ggc"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/css-what/-/css-what-5.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "lib/parse.js",
+                    "start_lineno": 227,
+                    "end_lineno": 235,
+                    "code": "var attributeMatch = selector .slice(selectorIndex + 1) .match(reAttr); if (!attributeMatch) { throw new Error(\"Malformed attribute selector: \" + selector.slice(selectorIndex)); var completeSelector = attributeMatch[0], _d = attributeMatch[1], namespace = _d === void 0 ? null : _d, baseName = attributeMatch[2], actionType = attributeMatch[3], _e = attributeMatch[5], quotedValue = _e === void 0 ? \"\" : _e, _f = attributeMatch[6], value = _f === void 0 ? quotedValue : _f, forceIgnore = attributeMatch[7]; selectorIndex += completeSelector.length + 1; var name_2 = unescapeCSS(baseName);"
+                }
+            },
+            {
+                "block": {
+                    "file": "lib/parse.js",
+                    "start_lineno": 241,
+                    "end_lineno": 247,
+                    "code": "forceIgnore ? forceIgnore.toLowerCase() === \"i\" : // If `xmlMode` is set, there are no rules; return `null`.  options.xmlMode ? null : // Otherwise, use the `caseInsensitiveAttributes` list.  caseInsensitiveAttributes.has(name_2);"
+                }
+            },
+            {
+                "block": {
+                    "file": "lib/parse.js",
+                    "start_lineno": 251,
+                    "end_lineno": 252,
+                    "code": "action: actionTypes[actionType], value: unescapeCSS(value),"
                 }
             }
         ]
@@ -28,39 +42,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/fb55/css-what/commit/4cdaacfd0d4b6fd00614be030da0dea6c2994655"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

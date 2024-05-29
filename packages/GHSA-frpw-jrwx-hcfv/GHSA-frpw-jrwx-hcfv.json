@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-frpw-jrwx-hcfv",
-        "cwe": "CWE-22"
+        "cve": "CVE-2021-25864",
+        "cwe": "CWE-22",
+        "github_link": "https://github.com/advisories/GHSA-frpw-jrwx-hcfv"
     },
     "correct_cwe": "CWE-22",
     "correct_package_link": "https://registry.npmjs.org/node-red-contrib-huemagic/-/node-red-contrib-huemagic-3.0.0.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "huemagic/hue-magic.js",
+                    "lineno": 274,
+                    "code": "RED.httpAdmin.get('/hue/animations/:file', function(req, res, next)"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "huemagic/hue-magic.js",
+                    "lineno": 277,
+                    "code": "res.sendFile(path.resolve(__dirname, 'animations', 'previews', req.params.file));"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/Foddy/node-red-contrib-huemagic/issues/217"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "A"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

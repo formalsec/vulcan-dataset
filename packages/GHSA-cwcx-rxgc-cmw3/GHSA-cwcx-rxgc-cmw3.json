@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-cwcx-rxgc-cmw3",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2021-25943",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-cwcx-rxgc-cmw3"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/101/-/101-1.6.3.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "set.js",
+                    "lineno": 21,
+                    "code": "function set (obj, key, val) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "set.js",
+                    "lineno": 60,
+                    "code": "keypather.set(obj, keypath, val);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://www.mend.io/vulnerability-database/CVE-2021-25943"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "B"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

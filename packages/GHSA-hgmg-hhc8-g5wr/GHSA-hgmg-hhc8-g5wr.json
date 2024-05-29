@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-hgmg-hhc8-g5wr",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-21254",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-hgmg-hhc8-g5wr"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/@ckeditor/ckeditor5-markdown-gfm/-/ckeditor5-markdown-gfm-24.0.0.tgz",
@@ -9,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/html2markdown/html2markdown.js",
+                    "lineno": 28,
+                    "code": "TurndownService.prototype.escape = function( string ) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/html2markdown/html2markdown.js",
+                    "lineno": 35,
+                    "code": "for ( const match of string.matchAll( regex ) ) {"
                 }
             }
         ]
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

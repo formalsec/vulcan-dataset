@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-8pww-pp5r-rff8",
-        "cwe": "CWE-22"
+        "cve": "CVE-2020-7681",
+        "cwe": "CWE-22",
+        "github_link": "https://github.com/advisories/GHSA-8pww-pp5r-rff8"
     },
     "correct_cwe": "CWE-22",
     "correct_package_link": "https://registry.npmjs.org/marscode/-/marscode-1.0.1-0.tgz",
@@ -9,21 +11,33 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 11,
+                    "code": "var requestListener = function (request, response) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "index.js",
+                    "lineno": 43,
+                    "code": "response.write(fs.readFileSync(path));"
+                }
+            },
+            {
+                "source": {
+                    "file": "index.js",
+                    "lineno": 11,
+                    "code": "var requestListener = function (request, response) {"
+                },
+                "sink": {
+                    "file": "index.js",
+                    "lineno": 57,
+                    "code": "response.write(fs.readFileSync(file));"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-MARSCODE-590122"
         }
     ],
     "patch": [
@@ -33,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "B"
         },
         "graudit": {
-            "score": ""
+            "score": "B"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "B"
         }
     }
 }

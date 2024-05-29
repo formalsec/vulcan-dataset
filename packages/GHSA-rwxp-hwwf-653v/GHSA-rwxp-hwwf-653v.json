@@ -1,10 +1,12 @@
 {
     "advisory": {
         "id": "GHSA-rwxp-hwwf-653v",
+        "cve": "CVE-2021-32817",
         "cwe": [
             "CWE-94",
             "CWE-200"
-        ]
+        ],
+        "github_link": "https://github.com/advisories/GHSA-rwxp-hwwf-653v"
     },
     "correct_cwe": [
         "CWE-94",
@@ -39,34 +41,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

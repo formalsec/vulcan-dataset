@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-9fhw-r42p-5c7r",
-        "cwe": "CWE-400"
+        "cve": "CVE-2021-27405",
+        "cwe": "CWE-400",
+        "github_link": "https://github.com/advisories/GHSA-9fhw-r42p-5c7r"
     },
     "correct_cwe": "CWE-400",
     "correct_package_link": "https://registry.npmjs.org/@progfay/scrapbox-parser/-/scrapbox-parser-7.0.1.tgz",
@@ -9,58 +11,59 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "esm/block/node/creator.js",
+                    "lineno": 2,
+                    "code": "export const createNodeParser = (nodeCreator, { parseOnNested, parseOnQuoted, patterns }) => {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "esm/block/node/creator.js",
+                    "lineno": 10,
+                    "code": "const match = pattern.exec(text);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://github.com/progfay/scrapbox-parser/pull/539"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": [
+                "https://github.com/progfay/scrapbox-parser/pull/540",
+                "https://github.com/progfay/scrapbox-parser/pull/519",
+                "https://github.com/progfay/scrapbox-parser/pull/539"
+            ]
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

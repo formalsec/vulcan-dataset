@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-j4rw-x3vg-c8r7",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7721",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-j4rw-x3vg-c8r7"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/node-oojs/-/node-oojs-1.4.0.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/oojs.js",
+                    "lineno": 96,
+                    "code": "setPath: function (namespace, path) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "src/oojs.js",
+                    "lineno": 116,
+                    "code": "node[currentName] = node[currentName] || { pathValue: node.pathValue };"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-NODEOOJS-598678"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

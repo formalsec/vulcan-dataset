@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-pgmg-gf5p-54j8",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7718",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-pgmg-gf5p-54j8"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/gammautils/-/gammautils-0.0.81.tgz",
@@ -45,34 +47,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "C"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

@@ -1,22 +1,24 @@
 {
     "advisory": {
         "id": "GHSA-7p8h-86p5-wv3p",
-        "cwe": "CWE-79"
+        "cve": "CVE-2021-21422",
+        "cwe": "CWE-79",
+        "github_link": "https://github.com/advisories/GHSA-7p8h-86p5-wv3p"
     },
     "correct_cwe": "CWE-79",
-    "correct_package_link": "https://registry.npmjs.org/mongo-express/-/mongo-express-1.0.0-alpha.2.tgz",
+    "correct_package_link": "https://registry.npmjs.org/mongo-express/-/mongo-express-1.0.0-alpha.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/scripts/collection.js",
+                    "lineno": 143,
+                    "code": "$.get(`${makeCollectionUrl()}${encodeURIComponent(_id)}/${prop}`, function (input) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/scripts/collection.js",
+                    "lineno": 188,
+                    "code": "target.parent().html(input);"
                 }
             }
         ]
@@ -28,39 +30,36 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/mongo-express/mongo-express/commit/f5e0d4931f856f032f22664b5e5901d5950cfd4b"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "C"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

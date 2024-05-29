@@ -1,3 +1,0 @@
-/src/index.js-74-    try {
-/src/index.js:75:      result = eval(toEvaluate)
-/src/index.js-76-    }

@@ -1,3 +1,0 @@
-/src/helpers.js-9-  )(stdout))
-/src/helpers.js:10:  return JSON.parse(parsed);
-/src/helpers.js-11-}

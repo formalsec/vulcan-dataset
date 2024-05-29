@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-rgfv-v3jh-7ffp",
-        "cwe": "CWE-1321"
+        "cve": "CVE-2020-7716",
+        "cwe": "CWE-1321",
+        "github_link": "https://github.com/advisories/GHSA-rgfv-v3jh-7ffp"
     },
     "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/deeps/-/deeps-1.4.5.tgz",
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

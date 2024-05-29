@@ -1,66 +1,61 @@
 {
     "advisory": {
         "id": "GHSA-h4j5-c7cj-74xg",
-        "cwe": "CWE-94"
+        "cve": "CVE-2020-28502",
+        "cwe": "CWE-94",
+        "github_link": "https://github.com/advisories/GHSA-h4j5-c7cj-74xg"
     },
     "correct_cwe": "CWE-94",
     "correct_package_link": "https://registry.npmjs.org/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.6.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
-                "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
-                },
-                "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                "block": {
+                    "file": "lib/XMLHttpRequest.js",
+                    "start_lineno": 480,
+                    "end_lineno": 480,
+                    "code": ", + (data ? \"req.write('\" + data.replace(/'/g, \"\\\\'\") + \"');\":\"\")"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-XMLHTTPREQUESTSSL-1082936"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/driverdan/node-XMLHttpRequest/commit/983cfc244c7567ad6a59e366e55a8037e0497fe6"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "C"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "C"
         },
         "msdevskim": {
-            "score": ""
+            "score": "C"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "C"
         }
     }
 }

@@ -1,4 +1,0 @@
-29a30,32
->   } else if (content.match(/[<>'"%;)(&+]/)) //Reject dangerous characters
->   {
->     content = 'Dangerous file name!'

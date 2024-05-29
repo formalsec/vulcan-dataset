@@ -1,66 +1,113 @@
 {
     "advisory": {
         "id": "GHSA-8mrf-64fw-2x75",
-        "cwe": "CWE-77"
+        "cve": "CVE-2020-8298",
+        "cwe": "CWE-77",
+        "github_link": "https://github.com/advisories/GHSA-8mrf-64fw-2x75"
     },
-    "correct_cwe": "CWE-77",
+    "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/fs-path/-/fs-path-0.0.24.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/index.js",
+                    "lineno": 44,
+                    "code": "copy: function (from, dist, callback) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/index.js",
+                    "lineno": 62,
+                    "code": "child_process.exec(cmd, function (error, stdout, stderr) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/index.js",
+                    "lineno": 44,
+                    "code": "copy: function (from, dist, callback) {"
+                },
+                "sink": {
+                    "file": "lib/index.js",
+                    "lineno": 73,
+                    "code": "child_process.exec(cmd, function (error, stdout, stderr) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/index.js",
+                    "lineno": 82,
+                    "code": "copySync: function (from, dist) {"
+                },
+                "sink": {
+                    "file": "lib/index.js",
+                    "lineno": 105,
+                    "code": "cmd && child_process.execSync(cmd);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/index.js",
+                    "lineno": 108,
+                    "code": "remove: function (from, callback) {"
+                },
+                "sink": {
+                    "file": "lib/index.js",
+                    "lineno": 127,
+                    "code": "child_process.exec(cmd, function (error, stdout, stderr) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/index.js",
+                    "lineno": 136,
+                    "code": "removeSync: function (from) {"
+                },
+                "sink": {
+                    "file": "lib/index.js",
+                    "lineno": 152,
+                    "code": "cmd && child_process.execSync(cmd);"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "file_path": "GHSA-8mrf-64fw-2x75.poc.js"
         }
     ],
     "patch": [
         {
-            "url": ""
+            "url": "https://github.com/pillys/fs-path/pull/6"
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "C"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "B"
         }
     }
 }

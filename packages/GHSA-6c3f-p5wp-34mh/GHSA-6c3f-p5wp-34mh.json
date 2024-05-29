@@ -1,22 +1,36 @@
 {
     "advisory": {
         "id": "GHSA-6c3f-p5wp-34mh",
-        "cwe": "CWE-78"
+        "cve": "CVE-2021-3190",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-6c3f-p5wp-34mh"
     },
     "correct_cwe": "CWE-78",
-    "correct_package_link": "https://registry.npmjs.org/async-git/-/async-git-1.13.1.tgz",
+    "correct_package_link": "https://registry.npmjs.org/async-git/-/async-git-1.13.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/reset/index.js",
+                    "lineno": 9,
+                    "code": "module.exports = async function(destination, {hard = true} = {}) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/reset/index.js",
+                    "lineno": 11,
+                    "code": "return await exec(`git reset ${destination} ${hard ? '--hard' : ''}`);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/reset/index.js",
+                    "lineno": 9,
+                    "code": "module.exports = async function(destination, {hard = true} = {}) {"
+                },
+                "sink": {
+                    "file": "lib/reset/index.js",
+                    "lineno": 15,
+                    "code": "return await exec(`git reset HEAD~${Math.abs(destination)} ${hard ? '--hard' : ''}`);"
                 }
             }
         ]
@@ -28,39 +42,39 @@
     ],
     "patch": [
         {
-            "url": ""
+            "url": [
+                "https://github.com/omrilotan/async-git/commit/a5f45f58941006c4cc1699609383b533d9b92c6a",
+                "https://github.com/omrilotan/async-git/pull/14/files"
+            ]
         }
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "D"
         },
         "njsscan": {
-            "score": ""
+            "score": "D"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "D"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "D"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }

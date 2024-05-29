@@ -1,7 +1,9 @@
 {
     "advisory": {
         "id": "GHSA-4rv9-5vc4-88cg",
-        "cwe": "CWE-78"
+        "cve": "CVE-2020-7785",
+        "cwe": "CWE-78",
+        "github_link": "https://github.com/advisories/GHSA-4rv9-5vc4-88cg"
     },
     "correct_cwe": "CWE-78",
     "correct_package_link": "https://registry.npmjs.org/node-ps/-/node-ps-0.0.2.tgz",
@@ -9,21 +11,21 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/index.js",
+                    "lineno": 80,
+                    "code": "function lookup(query, cb) {"
                 },
                 "sink": {
-                    "file": "",
-                    "lineno": -1,
-                    "code": ""
+                    "file": "lib/index.js",
+                    "lineno": 72,
+                    "code": "childProcess.exec(cmd, function (err, stdout, stderr) {"
                 }
             }
         ]
     },
     "poc": [
         {
-            "url": ""
+            "url": "https://security.snyk.io/vuln/SNYK-JS-NODEPS-1048335"
         }
     ],
     "patch": [
@@ -33,34 +35,31 @@
     ],
     "tools": {
         "codeql": {
-            "score": ""
+            "score": "A"
         },
         "njsscan": {
-            "score": ""
+            "score": "C"
         },
         "graudit": {
-            "score": ""
+            "score": "D"
         },
         "insidersec": {
-            "score": ""
+            "score": "D"
         },
         "eslint": {
-            "score": ""
-        },
-        "appinspector": {
-            "score": ""
+            "score": "A"
         },
         "msdevskim": {
-            "score": ""
+            "score": "D"
         },
         "drek": {
-            "score": ""
+            "score": "D"
         },
         "mosca": {
-            "score": ""
+            "score": "C"
         },
         "odgen": {
-            "score": ""
+            "score": "D"
         }
     }
 }
