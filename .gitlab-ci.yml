@@ -1,0 +1,3 @@
+verify:
+  script:
+    - make verify
