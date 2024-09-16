@@ -2,7 +2,7 @@ BUILD_DIR=./_build
 
 INDEX=$(BUILD_DIR)/index.txt
 
-ARCHIVES := $(wildcard packages/**/*.tgz)
+ARCHIVES := $(wildcard packages/**/**/*.tgz)
 PACKAGES := $(addprefix $(BUILD_DIR)/,$(ARCHIVES:.tgz=))
 
 default: all
