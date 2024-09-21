@@ -1,10 +1,10 @@
-#!/python3
+#!/usr/bin/env python3
 import os
 import glob
 import json
 import shutil
 
-def parse_json(path):
+def json_of_file(path):
     with open(path, 'r') as fd:
         return json.load(fd)
 
@@ -21,7 +21,7 @@ output = "packages_by_cwe"
 configs = glob.glob("packages/**/*.json", recursive=True)
 
 for conf_path in configs:
-    conf = parse_json(conf_path)
+    conf = json_of_file(conf_path)
     cwes = get_cwes(conf)
     pkg_src = os.path.dirname(conf_path)
     pkg_base = os.path.basename(pkg_src)
