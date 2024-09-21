@@ -14,7 +14,7 @@ unpack: $(PACKAGES)
 index: $(INDEX)
 
 $(INDEX):
-	@./index_build.py $@
+	@./scripts/index_build.py $@
 
 $(BUILD_DIR)/packages/%: packages/%.tgz | $(BUILD_DIR)
 	@mkdir -p $(dir $@); \
@@ -27,7 +27,7 @@ $(BUILD_DIR):
 	@mkdir -p $@
 
 validate: $(INDEX)
-	@./index_validate.py $^
+	@./scripts/index_validate.py $^
 
 clean:
 	rm -rf $(BUILD_DIR)
