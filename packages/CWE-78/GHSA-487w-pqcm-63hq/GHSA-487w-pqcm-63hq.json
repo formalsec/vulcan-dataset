@@ -1,71 +1,71 @@
 {
-    "advisory": {
-        "id": "GHSA-487w-pqcm-63hq",
-        "cve": "CVE-2020-7794",
-        "cwe": [
-            "CWE-77",
-            "CWE-78"
-        ],
-        "github_link": "https://github.com/advisories/GHSA-487w-pqcm-63hq"
-    },
-    "correct_cwe": [
-        "CWE-77",
-        "CWE-78"
+  "advisory": {
+    "id": "GHSA-487w-pqcm-63hq",
+    "cve": "CVE-2020-7794",
+    "cwe": [
+      "CWE-77",
+      "CWE-78"
     ],
-    "correct_package_link": "https://registry.npmjs.org/buns/-/buns-1.1.6.tgz",
-    "vulnerability": {
-        "vulnerability_location": [
-            {
-                "source": {
-                    "file": "lib/index.js",
-                    "lineno": 652,
-                    "code": "install: function(requestedModule) {"
-                },
-                "sink": {
-                    "file": "lib/index.js",
-                    "lineno": 678,
-                    "code": "exec(command);"
-                }
-            }
-        ]
-    },
-    "poc": [
-        {
-            "url": "https://security.snyk.io/vuln/SNYK-JS-BUNS-1050389"
+    "github_link": "https://github.com/advisories/GHSA-487w-pqcm-63hq"
+  },
+  "correct_cwe": [
+    "CWE-77",
+    "CWE-78"
+  ],
+  "correct_package_link": "https://registry.npmjs.org/buns/-/buns-1.1.6.tgz",
+  "vulnerability": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "lib/index.js",
+          "lineno": 652,
+          "code": "install: function(requestedModule) {"
+        },
+        "sink": {
+          "file": "lib/index.js",
+          "lineno": 678,
+          "code": "exec(command);"
         }
-    ],
-    "patch": [
-        {
-            "url": ""
-        }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "A"
-        }
+      }
+    ]
+  },
+  "poc": [
+    {
+      "url": "https://security.snyk.io/vuln/SNYK-JS-BUNS-1050389"
     }
+  ],
+  "patch": [
+    {
+      "url": ""
+    }
+  ],
+  "tools": {
+    "codeql": {
+      "score": "C"
+    },
+    "njsscan": {
+      "score": "C"
+    },
+    "graudit": {
+      "score": "C"
+    },
+    "insidersec": {
+      "score": "D"
+    },
+    "eslint": {
+      "score": "C"
+    },
+    "msdevskim": {
+      "score": "C"
+    },
+    "drek": {
+      "score": "D"
+    },
+    "mosca": {
+      "score": "C"
+    },
+    "odgen": {
+      "score": "A"
+    }
+  }
 }

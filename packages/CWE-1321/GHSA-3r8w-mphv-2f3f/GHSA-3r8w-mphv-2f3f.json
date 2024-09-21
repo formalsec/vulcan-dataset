@@ -1,65 +1,65 @@
 {
-    "advisory": {
-        "id": "GHSA-3r8w-mphv-2f3f",
-        "cve": "CVE-2021-23396",
-        "cwe": "CWE-1321",
-        "github_link": "https://github.com/advisories/GHSA-3r8w-mphv-2f3f"
-    },
-    "correct_cwe": "CWE-1321",
-    "correct_package_link": "https://registry.npmjs.org/lutils/-/lutils-2.4.0.tgz",
-    "vulnerability": {
-        "vulnerability_location": [
-            {
-                "source": {
-                    "file": "merge/merge.js",
-                    "lineno": 39,
-                    "code": "this.merge = function (subject) {"
-                },
-                "sink": {
-                    "file": "merge/merge.js",
-                    "lineno": 85,
-                    "code": "obj1[key] = obj2[key];"
-                }
-            }
-        ]
-    },
-    "poc": [
-        {
-            "url": "https://security.snyk.io/vuln/SNYK-JS-LUTILS-1311023"
+  "advisory": {
+    "id": "GHSA-3r8w-mphv-2f3f",
+    "cve": "CVE-2021-23396",
+    "cwe": "CWE-1321",
+    "github_link": "https://github.com/advisories/GHSA-3r8w-mphv-2f3f"
+  },
+  "correct_cwe": "CWE-1321",
+  "correct_package_link": "https://registry.npmjs.org/lutils/-/lutils-2.4.0.tgz",
+  "vulnerability": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "merge/merge.js",
+          "lineno": 39,
+          "code": "this.merge = function (subject) {"
+        },
+        "sink": {
+          "file": "merge/merge.js",
+          "lineno": 85,
+          "code": "obj1[key] = obj2[key];"
         }
-    ],
-    "patch": [
-        {
-            "url": ""
-        }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
+      }
+    ]
+  },
+  "poc": [
+    {
+      "url": "https://security.snyk.io/vuln/SNYK-JS-LUTILS-1311023"
     }
+  ],
+  "patch": [
+    {
+      "url": ""
+    }
+  ],
+  "tools": {
+    "codeql": {
+      "score": "D"
+    },
+    "njsscan": {
+      "score": "D"
+    },
+    "graudit": {
+      "score": "D"
+    },
+    "insidersec": {
+      "score": "D"
+    },
+    "eslint": {
+      "score": "A"
+    },
+    "msdevskim": {
+      "score": "D"
+    },
+    "drek": {
+      "score": "D"
+    },
+    "mosca": {
+      "score": "D"
+    },
+    "odgen": {
+      "score": "D"
+    }
+  }
 }

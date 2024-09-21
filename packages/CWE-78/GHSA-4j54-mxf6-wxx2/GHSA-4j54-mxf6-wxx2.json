@@ -1,65 +1,65 @@
 {
-    "advisory": {
-        "id": "GHSA-4j54-mxf6-wxx2",
-        "cve": "CVE-2020-7620",
-        "cwe": "CWE-78",
-        "github_link": "https://github.com/advisories/GHSA-4j54-mxf6-wxx2"
-    },
-    "correct_cwe": "CWE-78",
-    "correct_package_link": "https://registry.npmjs.org/pomelo-monitor/-/pomelo-monitor-0.3.7.tgz",
-    "vulnerability": {
-        "vulnerability_location": [
-            {
-                "source": {
-                    "file": "lib/processMonitor.js",
-                    "lineno": 23,
-                    "code": "function getPsInfo(param, callback) { "
-                },
-                "sink": {
-                    "file": "lib/processMonitor.js",
-                    "lineno": 28,
-                    "code": "exec(cmd, function(err, output) {"
-                }
-            }
-        ]
-    },
-    "poc": [
-        {
-            "url": "https://security.snyk.io/vuln/SNYK-JS-POMELOMONITOR-173695"
+  "advisory": {
+    "id": "GHSA-4j54-mxf6-wxx2",
+    "cve": "CVE-2020-7620",
+    "cwe": "CWE-78",
+    "github_link": "https://github.com/advisories/GHSA-4j54-mxf6-wxx2"
+  },
+  "correct_cwe": "CWE-78",
+  "correct_package_link": "https://registry.npmjs.org/pomelo-monitor/-/pomelo-monitor-0.3.7.tgz",
+  "vulnerability": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "lib/processMonitor.js",
+          "lineno": 23,
+          "code": "function getPsInfo(param, callback) { "
+        },
+        "sink": {
+          "file": "lib/processMonitor.js",
+          "lineno": 28,
+          "code": "exec(cmd, function(err, output) {"
         }
-    ],
-    "patch": [
-        {
-            "url": ""
-        }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
+      }
+    ]
+  },
+  "poc": [
+    {
+      "url": "https://security.snyk.io/vuln/SNYK-JS-POMELOMONITOR-173695"
     }
+  ],
+  "patch": [
+    {
+      "url": ""
+    }
+  ],
+  "tools": {
+    "codeql": {
+      "score": "A"
+    },
+    "njsscan": {
+      "score": "D"
+    },
+    "graudit": {
+      "score": "D"
+    },
+    "insidersec": {
+      "score": "D"
+    },
+    "eslint": {
+      "score": "C"
+    },
+    "msdevskim": {
+      "score": "D"
+    },
+    "drek": {
+      "score": "D"
+    },
+    "mosca": {
+      "score": "D"
+    },
+    "odgen": {
+      "score": "D"
+    }
+  }
 }

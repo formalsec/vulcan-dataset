@@ -1,73 +1,73 @@
 {
-    "advisory": {
-        "id": "GHSA-4228-7qvx-f4rq",
-        "cve": "CVE-2020-8186",
-        "cwe": [
-            "CWE-74",
-            "CWE-77",
-            "CWE-78"
-        ],
-        "github_link": "https://github.com/advisories/GHSA-4228-7qvx-f4rq"
-    },
-    "correct_cwe": [
-        "CWE-74",
-        "CWE-77",
-        "CWE-78"
+  "advisory": {
+    "id": "GHSA-4228-7qvx-f4rq",
+    "cve": "CVE-2020-8186",
+    "cwe": [
+      "CWE-74",
+      "CWE-77",
+      "CWE-78"
     ],
-    "correct_package_link": "https://registry.npmjs.org/devcert/-/devcert-1.1.1.tgz",
-    "vulnerability": {
-        "vulnerability_location": [
-            {
-                "source": {
-                    "file": "dist/index.js",
-                    "lineno": 33,
-                    "code": "function certificateFor(domain, options = {}) {"
-                },
-                "sink": {
-                    "file": "dist/utils.js",
-                    "lineno": 22,
-                    "code": "return child_process_1.execFileSync(cmd, args, options);"
-                }
-            }
-        ]
-    },
-    "poc": [
-        {
-            "url": "https://hackerone.com/reports/863544"
+    "github_link": "https://github.com/advisories/GHSA-4228-7qvx-f4rq"
+  },
+  "correct_cwe": [
+    "CWE-74",
+    "CWE-77",
+    "CWE-78"
+  ],
+  "correct_package_link": "https://registry.npmjs.org/devcert/-/devcert-1.1.1.tgz",
+  "vulnerability": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "dist/index.js",
+          "lineno": 33,
+          "code": "function certificateFor(domain, options = {}) {"
+        },
+        "sink": {
+          "file": "dist/utils.js",
+          "lineno": 22,
+          "code": "return child_process_1.execFileSync(cmd, args, options);"
         }
-    ],
-    "patch": [
-        {
-            "url": ""
-        }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
+      }
+    ]
+  },
+  "poc": [
+    {
+      "url": "https://hackerone.com/reports/863544"
     }
+  ],
+  "patch": [
+    {
+      "url": ""
+    }
+  ],
+  "tools": {
+    "codeql": {
+      "score": "D"
+    },
+    "njsscan": {
+      "score": "D"
+    },
+    "graudit": {
+      "score": "C"
+    },
+    "insidersec": {
+      "score": "D"
+    },
+    "eslint": {
+      "score": "C"
+    },
+    "msdevskim": {
+      "score": "C"
+    },
+    "drek": {
+      "score": "D"
+    },
+    "mosca": {
+      "score": "C"
+    },
+    "odgen": {
+      "score": "D"
+    }
+  }
 }
