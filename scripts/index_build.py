@@ -41,7 +41,9 @@ for conf_path in configs:
     # assert(ext == ".tgz" or ext == ".gz" or ext == ".zip")
     relative_package_name = join(basename(dir_pkg), package_name)
     for file in gen_sink_locations(relative_package_name, conf):
-        results[dir_cwe].append(join(relative_package_name, file))
+        file = join(relative_package_name, file)
+        if file not in results[dir_cwe]:
+            results[dir_cwe].append(file)
 
 with open(output, 'w') as fd:
     json.dump(results, fd, indent=2)
